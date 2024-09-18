@@ -1,24 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import Home from './components/Home';
+import Navbar from './components/Navbar';
+import OurBeers from './components/OurBeers';
+import ScreenTwo from './components/ScreenTwo';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div style={{ background: 'linear-gradient(180deg, #014379 5%, rgba(2, 103, 181, 1) 100%)' }} className='h-lvh px-8'>
+        <Navbar />
+        <Home />
+      </div>
+      <div className='h-lvh px-8 bg-[#00ACC7]'>
+        {/* <Home /> */}
+        <ScreenTwo />
+      </div>
+
+      <div style={{ background: 'linear-gradient(180deg, #014379 5%, rgba(2, 103, 181, 1) 100%)' }} className='h-[103vh] px-8'>
+        <OurBeers />
+      </div>
+
     </div>
+
   );
 }
 
